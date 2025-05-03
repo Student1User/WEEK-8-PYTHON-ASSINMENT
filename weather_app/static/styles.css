@@ -1,0 +1,178 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    background-size: 400% 400%;
+    animation: gradientBackground 6s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Container Styles */
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 1s ease-out; /* Card bounce-in animation */
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    font-size: 3em;
+    color: #4a90e2;
+    animation: fadeInText 1.5s ease-in-out; /* Header text fade-in animation */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.6);
+}
+
+button {
+    width: 80%;
+    padding: 10px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ab7;
+    transform: scale(1.05); /* Button hover scale effect */
+}
+
+/* Weather Info */
+.weather-info {
+    margin-top: 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-out; /* Weather info fade-in animation */
+}
+
+.weather-info h2 {
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+.weather-info p {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+/* Weather Icons */
+.weather-icon {
+    margin-bottom: 20px;
+    animation: weatherIconAnimation 1.5s infinite; /* Weather icon animation */
+}
+
+.weather-icon img {
+    width: 80px;
+    height: 80px;
+    transition: all 0.3s ease;
+}
+
+/* Error Handling */
+.error {
+    background-color: #ffcccb;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 8px;
+    color: #d8000c;
+    font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes weatherIconAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
